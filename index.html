@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="notas.html">Notas y Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Aplicación Web</h1>
+
+    <!-- Contactame -->
+    <h2>Contactame</h2>
+    <form id="contactForm" onsubmit="submitContactForm(event)">
+        <textarea id="contactMessage" placeholder="Escribe tu mensaje aquí..."></textarea>
+        <input type="file" id="contactFile">
+        <br>
+        <div class="button-row">
+            <button type="submit">Enviar Mensaje</button>
+            <button type="button" onclick="contactWhatsApp()">Contactame WhatsApp</button>
+            <button type="button" onclick="yapeMe()">Yapear (No es obligatorio!)</button>
+        </div>
+    </form>
+    <br><br>
+
+    <!-- Videos de YouTube -->
+    <h2>Música Cristiana Playlist</h2>
+    <div class="video-row">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GVkgfJ5Du6g?si=GzhopkoeGqZcZfY-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/HftznTyT6aE?si=Wi8aL8lb180enQlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <br><br>
+
+    <!-- Ubicación Google Maps -->
+    <h2>¿Quieres asistir a la Iglesia Alianza Cristiana y Misionera de Los Olivos?</h2>
+    <p>Eres bienvenido, te esperamos. "Mas Dios muestra su amor para con nosotros, en que aún siendo pecadores, Cristo murió por nosotros. Romanos 5:8" El verdadero Amor.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d720.4518840875602!2d-77.06399351287995!3d-11.994971679138859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce5642e74f29%3A0x3f47f2c257d2a56f!2sIglesia%20Alianza%20Cristiana%20y%20Misionera!5e0!3m2!1ses-419!2spe!4v1740184025604!5m2!1ses-419!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br><br>
+
+    <!-- Redireccionar a Facebook y YouTube -->
+    <h2>Cultos virtuales</h2>
+    <div class="link-row">
+        <a href="https://www.facebook.com/iacymlosolivos.oficial" target="_blank">Visita nuestro Facebook IACYM Los Olivos</a>
+        <a href="https://www.youtube.com/@iacymlosolivos2101" target="_blank">Cultos virtuales en Youtube</a>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

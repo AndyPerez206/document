@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas y Contactos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="notas.html">Notas y Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Notas y Contactos</h1>
+    
+    <!-- Cuadro de texto como block de notas -->
+    <textarea id="textNotes" placeholder="Escribe tus notas aquí..."></textarea>
+    <br>
+    <button onclick="sendEmail()">Enviar texto a correo</button>
+    <button onclick="sendWhatsApp()">Enviar texto a WhatsApp</button>
+    <button onclick="clearNotes()">Borrar Apuntes</button>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
