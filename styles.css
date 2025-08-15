@@ -76,15 +76,18 @@ button:hover {
 }
 
 .video-row {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
 
 .video-row iframe {
-    flex: 1 1 45%;
-    max-width: 45%;
-    margin: 5px;
+  width: 100%;
+  max-width: 360px; /* Cambia según tu preferencia */
+  height: 215px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .link-row {
@@ -100,4 +103,18 @@ button:hover {
     font-size: 18px;
     text-align: center;
     margin: 5px;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .video-row iframe {
+    max-width: 560px;
+    height: 315px;
+  }
 }
