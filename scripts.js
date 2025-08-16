@@ -26,12 +26,9 @@ function sendEmail() {
     }
 }
 
-function sendWhatsApp() {
-    const notes = document.getElementById("textNotes").value;
-    const whatsappNumber = prompt("Ingrese el número de WhatsApp de destino:");
-    if (whatsappNumber) {
-        window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodeURIComponent(notes)}`, "_blank");
-    }
+function contactWhatsApp() {
+    // Reemplaza 51987654321 por tu número de WhatsApp (incluye el código de país)
+    window.open("https://wa.me/51997531712", "_blank");
 }
 
 function clearNotes() {
