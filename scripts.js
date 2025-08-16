@@ -38,4 +38,4 @@ function clearNotes() {
     }
 }
 
-function submitContact
+
