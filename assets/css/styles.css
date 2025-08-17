@@ -1,0 +1,118 @@
+/* Variables - ajustar paletas aquí si desea otros colores */
+:root{
+  --bg-1: #05060b;
+  --bg-2: #0b0f1a;
+
+  --accent-1: #00f0ff; /* cyan */
+  --accent-2: #7c00ff; /* electric purple */
+  --accent-3: #ff0078; /* hot pink */
+  --accent-4: #ffd500; /* electric yellow */
+
+  --shadow-1: 0 0 8px rgba(0,240,255,0.25);
+  --shadow-2: 0 0 20px rgba(124,0,255,0.18);
+  --shadow-3: 0 0 40px rgba(255,0,120,0.12);
+}
+
+/* Page layout */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(124,0,255,0.06), transparent 5%),
+              radial-gradient(900px 400px at 90% 90%, rgba(0,240,255,0.04), transparent 7%),
+              linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  color: #fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+
+/* Container to center content and keep widths reasonable on large screens */
+.container{
+  text-align:center;
+  max-width:1100px;
+  width:100%;
+}
+
+/* Responsive neon text */
+.neon-text{
+  margin:0;
+  line-height:1;
+  letter-spacing: -0.02em;
+  font-weight:800;
+  /* Responsive size: small -> large */
+  font-size: clamp(2.2rem, 10vw, 6.5rem);
+
+  /* Neon gradient text using background-clip */
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2) 30%, var(--accent-3) 65%, var(--accent-4));
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  /* layered glow */
+  text-shadow:
+    0 0 6px rgba(0,0,0,0.6),
+    0 0 8px rgba(0,240,255,0.12),
+    0 0 18px rgba(124,0,255,0.12),
+    0 0 30px rgba(255,0,120,0.08);
+  transform-origin: center;
+  display:inline-block;
+
+  /* Animations */
+  animation: gradientShift 6s linear infinite, pulse 3.2s ease-in-out infinite;
+}
+
+/* Optional caption */
+.caption{
+  margin-top: 0.6rem;
+  color: rgba(255,255,255,0.75);
+  font-size: clamp(0.9rem, 2.2vw, 1.05rem);
+}
+
+/* Buttons (non-intrusive controls) */
+.controls{
+  margin-top:1.25rem;
+  display:flex;
+  gap:.5rem;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.btn{
+  background:linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.06);
+  padding:.45rem .9rem;
+  border-radius:8px;
+  font-size:.95rem;
+  cursor:pointer;
+  transition:transform .12s ease, box-shadow .12s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.02);
+}
+.btn:active{transform:translateY(1px) scale(.998)}
+.btn:hover{transform:translateY(-3px)}
+
+/* Keyframes: gradient moves horizontally to create dynamic electric look */
+@keyframes gradientShift{
+  0%{background-position: 0% 50%}
+  50%{background-position: 100% 50%}
+  100%{background-position: 0% 50%}
+}
+
+/* soft pulse in glow and tiny scale for liveliness */
+@keyframes pulse{
+  0%{filter:drop-shadow(0 0 6px rgba(0,240,255,0.06)); transform:scale(1)}
+  50%{filter:drop-shadow(0 0 18px rgba(124,0,255,0.12)); transform:scale(1.02)}
+  100%{filter:drop-shadow(0 0 6px rgba(0,240,255,0.06)); transform:scale(1)}
+}
+
+/* Accessibility: respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .neon-text, .btn{animation:none; transition:none}
+}
