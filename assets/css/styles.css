@@ -147,7 +147,7 @@ body{
 /* Pequeños ajustes para elementos fuera del hero: asegurar legibilidad en fondo blanco */
 main .container p{ color: #111 }
 
-.música-div {
+.musica-div {
   width: 100%; 
   display: flex;
   flex-wrap: wrap;
