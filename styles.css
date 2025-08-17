@@ -131,12 +131,13 @@ iframe[src*="google.com/maps"] {
   }
 }
 
-.musica-div{
+.musica-div2{
     text-aling:center;
     Display:flex;
     Flex-direction:row;
     border-radius: 6px;
-    border: 1px solid #ccc;
+    border: 1px solid #cc;
+    Widht:100%;
     
 }
 
