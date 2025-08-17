@@ -131,6 +131,15 @@ iframe[src*="google.com/maps"] {
   }
 }
 
+.musica-div{
+    text-aling:center;
+    Display:flex;
+    Flex-direction:row;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    
+}
+
 
 
 
