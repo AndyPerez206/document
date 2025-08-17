@@ -146,3 +146,24 @@ body{
 
 /* Pequeños ajustes para elementos fuera del hero: asegurar legibilidad en fondo blanco */
 main .container p{ color: #111 }
+
+.música-div {
+  width: 100%; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center
+}
+.musica-div1{}
+.musica-div2{
+    text-aling:center;
+    Display:flex;
+    Flex-direction:row;
+    border-radius: 6px;
+    border: 1px solid #cc;
+    Widht:100%;
+}
+
+.ubicacion-div{} 
+.ubicacion-div1{} 
+.ubicacion-div2{} 
