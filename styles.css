@@ -131,6 +131,16 @@ iframe[src*="google.com/maps"] {
   }
 }
 
+.linkedin-button {
+  background-color: #0077b5; /* Color de fondo de LinkedIn */
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block; /* Para que el botón tenga un ancho definido */
+  /* Añade más estilos para personalizar la apariencia */
+    }
+
 .música-div {
   width: 100%; 
   display: flex;
