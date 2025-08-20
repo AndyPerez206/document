@@ -68,8 +68,8 @@ button:hover {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
-    /* color beige bb*/
-  background-color: #f5f5dc;
+    /* color beige bb #f5f5dc*/
+
 }
 
 .button-row button {
@@ -77,7 +77,9 @@ button:hover {
   font-size: 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  background: #f2f2f2;
+  /*background: #f2f2f2;*/
+  background-color: #f5f5dc;
+    
 }
 
 .video-row {
@@ -160,9 +162,9 @@ iframe[src*="google.com/maps"] {
     Widht:100%;
 }
 
-ubicacion-div{} 
-ubicacion-div1{} 
-ubicacion-div2{} 
+.ubicacion-div{} 
+.ubicacion-div1{} 
+.ubicacion-div2{} 
 
 
 
