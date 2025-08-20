@@ -68,6 +68,8 @@ button:hover {
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 10px;
+    /* color beige bb*/
+  Color: f5f5dc;
 }
 
 .button-row button {
@@ -99,7 +101,7 @@ button:hover {
   }
 }
 
-.link-row {
+.li;nk-row {
   display: flex;
   flex-direction: column;
   gap: 10px;
