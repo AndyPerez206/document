@@ -40,6 +40,8 @@ function clearNotes() {
     }
 }
 
+
+<!-- IA -->
 async function obtenerRespuesta(pregunta) {
   const response = await fetch("https://api.tu-ia.com/v1/chat", {
     method: "POST",
