@@ -58,12 +58,14 @@ document.getElementById("btnPreguntar").addEventListener("click", async () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer TU_API_KEY_AQUI"
+        "Authorization": "Bearer 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"
       },
       body: JSON.stringify({
-        model: "text-davinci-003",
+        model: "gpt-4o-mini",
+        input: "write a haiku about ai",
+        store: true,
         prompt: pregunta,
-        max_tokens: 100
+        max_tokens: 100000000000000000
       })
     });
 
