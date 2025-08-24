@@ -40,4 +40,23 @@ function clearNotes() {
     }
 }
 
+async function obtenerRespuesta(pregunta) {
+  const response = await fetch("https://api.tu-ia.com/v1/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer TU_API_KEY"
+    },
+    body: JSON.stringify({
+      prompt: pregunta,
+      max_tokens: 100
+    })
+  });
+
+  const data = await response.json();
+  document.getElementById("respuesta").innerText = data.choices[0].text;
+}
+
+
+
 
