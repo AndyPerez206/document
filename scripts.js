@@ -41,73 +41,7 @@ function clearNotes() {
 }
 
 
-/* IA */
-document.getElementById("btnPreguntar").addEventListener("click", async () => {
-  const pregunta = document.getElementById("pregunta").value;
-  const respuestaElemento = document.getElementById("respuesta");
 
-  if (!pregunta.trim()) {
-    respuestaElemento.innerText = "Por favor, escribe una pregunta.";
-    return;
-  }
-
-  respuestaElemento.innerText = "Pensando... 🤔";
-
-  try {
-
-    const response = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": "Bearer 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"
-      },
-      body: JSON.stringify({
-        model: "gpt-4o-mini",
-        input: "write a haiku about ai",
-        store: true,
-        prompt: pregunta,
-        max_tokens: 100000000000000000
-      })
-    });
-
-    const data = await response.json();
-    respuestaElemento.innerText = data.choices[0].text.trim();
-  } catch (error) {
-    console.error("Error:", error);
-    respuestaElemento.innerText = "Hubo un error al obtener la respuesta.";
-  }
-});
-
-
-
-/* IA */
-import OpenAI from "openai";
-import { zodTextFormat } from "openai/helpers/zod";
-import { z } from "zod";
-
-const openai = new OpenAI();
-
-const CalendarEvent = z.object({
-  name: z.string(),
-  date: z.string(),
-  participants: z.array(z.string()),
-});
-
-const response = await openai.responses.parse({
-  model: "gpt-4o-2024-08-06",
-  input: [
-    { role: "system", content: "Extract the event information." },
-    {
-      role: "user",
-      content: "Alice and Bob are going to a science fair on Friday.",
-    },
-  ],
-  text: {
-    format: zodTextFormat(CalendarEvent, "event"),
-  },
-});
-
-const event = response.output_parsed;
 
 
 
