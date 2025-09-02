@@ -50,6 +50,13 @@ textarea {
     font-size: 16px;
     resize: none;
 }
+#textNotes {
+    background-image: url('1756781032049.jpg'); /* Cambia la ruta si tu imagen está en otra carpeta */
+    background-size: cover;     /* La imagen cubre todo el área del textarea */
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #333;                /* Cambia el color del texto si lo necesitas */
+}
 
 button {
     padding: 10px;
