@@ -11,7 +11,7 @@ body {
 
 header {
     background-color: #f0f0f0;
-    padding: 10px 0;
+    padding: 00px 0;
     text-align: center;
 }
 
@@ -33,14 +33,14 @@ nav ul li a {
 }
 
 h1, h2 {
-    padding: 10px;
+    padding: 00px;
     background-color: #f0f0f0;
     text-align: center;
     margin: 0;
     width: 100%;
 }
 .pcentro{
-    padding: 10px;
+    padding: 00px;
     background-color: #f0f0f0;
     text-align: center;
     margin: 0;
@@ -52,7 +52,7 @@ textarea {
     width: 100%;
     height: calc(100vh - 120px);
     margin: 0;
-    padding: 10px;
+    padding: 00px;
     box-sizing: border-box;
     font-size: 16px;
     resize: none;
@@ -66,7 +66,7 @@ textarea {
 }
 
 button {
-    padding: 10px;
+    padding: 00px;
     margin: 5px;
     font-size: 16px;
     width: calc(33.33% - 10px);
