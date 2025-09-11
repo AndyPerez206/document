@@ -42,7 +42,7 @@ function clearNotes() {
 
 
     // Función para obtener y mostrar la fecha y hora actual
-    function mostrarFechaHora() {
+ function mostrarFechaHora() {
       const ahora = new Date(); // Crear un objeto Date con la fecha y hora actual
       const fecha = ahora.toLocaleDateString(); // Obtener la fecha en formato local
       const hora = ahora.toLocaleTimeString(); // Obtener la hora en formato local
