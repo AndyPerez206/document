@@ -41,8 +41,19 @@ function clearNotes() {
 }
 
 
+    // Función para obtener y mostrar la fecha y hora actual
+    function mostrarFechaHora() {
+      const ahora = new Date(); // Crear un objeto Date con la fecha y hora actual
+      const fecha = ahora.toLocaleDateString(); // Obtener la fecha en formato local
+      const hora = ahora.toLocaleTimeString(); // Obtener la hora en formato local
 
+      // Mostrar la fecha y hora en el elemento con id "fecha-hora"
+      document.getElementById('fecha-hora').textContent = `Fecha: ${fecha} | Hora: ${hora}`;
+    }
 
+    // Llamar a la función al cargar la página
+    mostrarFechaHora();
 
-
+    // Actualizar la hora cada segundo
+    setInterval(mostrarFechaHora, 1000);
 
