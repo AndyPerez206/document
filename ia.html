@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Inteligencia Artificial</title>
+</head>
+<body>
+  <h1>Pregúntale a la IA</h1>
+  <form id="iaForm">
+    <input type="text" id="pregunta" placeholder="Escribe tu pregunta aquí" required>
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="respuesta"></div>
 
+  <script>
+    document.getElementById('iaForm').onsubmit = async function(e) {
+      e.preventDefault();
+      const pregunta = document.getElementById('pregunta').value;
+      document.getElementById('respuesta').textContent = 'Pensando...';
+
+      // Aquí debes integrar una API de IA (como OpenAI, o tu backend)
+      // Ejemplo (no funcional sin backend propio):
+      // const respuestaIA = await fetch('TU_ENDPOINT_IA', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ pregunta })
+      // }).then(res => res.json());
+
+      // document.getElementById('respuesta').textContent = respuestaIA.respuesta;
+
+      // Por ahora, simula una respuesta:
+      setTimeout(() => {
+        document.getElementById('respuesta').textContent = `Respuesta simulada para: "${pregunta}"`;
+      }, 1500);
+    };
+  </script>
+</body>
+</html>
