@@ -57,3 +57,9 @@ function clearNotes() {
     // Actualizar la hora cada segundo
     setInterval(mostrarFechaHora, 1000);
 
+<script>
+  document.getElementById('iaBtn').onclick = function() {
+    window.location.href = 'ia.html';
+  };
+</script>
+
